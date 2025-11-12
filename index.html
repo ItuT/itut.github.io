@@ -12,12 +12,15 @@
         }
 
         :root {
-            --color-primary: #002868;
-            --color-secondary: #009543;
+            --color-primary: #4A90E2;
+            --color-secondary: #50C878;
             --color-accent: #FFFFFF;
-            --color-dark: #000000;
+            --color-dark: #2C3E50;
             --color-light-blue: #87CEEB;
-            --color-bg-dark: #001F4D;
+            --color-bg-dark: #3A7BC8;
+            --color-gradient-start: #87CEEB;
+            --color-gradient-mid: #4A90E2;
+            --color-gradient-end: #50C878;
         }
 
         body {
@@ -29,14 +32,14 @@
 
         /* Navigation */
         nav {
-            background: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-mid) 50%, var(--color-gradient-end) 100%);
             color: var(--color-accent);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
         nav .container {
@@ -72,7 +75,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg-dark) 100%);
+            background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-mid) 50%, var(--color-gradient-end) 100%);
             color: var(--color-accent);
             padding: 150px 2rem 100px;
             text-align: center;
@@ -82,20 +85,22 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
             color: var(--color-accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .hero .tagline {
             font-size: 1.5rem;
-            color: var(--color-secondary);
+            color: var(--color-dark);
             margin-bottom: 1rem;
             font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
         }
 
         .hero .description {
             font-size: 1.2rem;
             max-width: 800px;
             margin: 0 auto 2rem;
-            color: var(--color-light-blue);
+            color: var(--color-dark);
         }
 
         .hero .stats {
@@ -113,12 +118,13 @@
         .hero .stat-number {
             font-size: 3rem;
             font-weight: bold;
-            color: var(--color-secondary);
+            color: var(--color-accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
         .hero .stat-label {
             font-size: 1rem;
-            color: var(--color-light-blue);
+            color: var(--color-dark);
         }
 
         /* Container */
@@ -160,20 +166,22 @@
         }
 
         .about-card {
-            background: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-gradient-mid) 0%, var(--color-gradient-end) 100%);
             color: var(--color-accent);
             padding: 2rem;
             border-radius: 10px;
-            border-left: 5px solid var(--color-secondary);
+            border-left: 5px solid var(--color-accent);
             transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .about-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         .about-card h3 {
-            color: var(--color-secondary);
+            color: var(--color-accent);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
@@ -232,28 +240,29 @@
         }
 
         .research-paper {
-            background: var(--color-bg-dark);
+            background: linear-gradient(135deg, var(--color-gradient-mid) 0%, var(--color-primary) 100%);
             color: var(--color-accent);
             padding: 2rem;
             border-radius: 10px;
             border-left: 5px solid var(--color-secondary);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .research-paper h3 {
-            color: var(--color-secondary);
+            color: var(--color-accent);
             margin-bottom: 0.5rem;
             font-size: 1.5rem;
         }
 
         .research-paper .authors {
             font-size: 0.9rem;
-            color: var(--color-light-blue);
+            color: rgba(255,255,255,0.8);
             margin-bottom: 0.5rem;
         }
 
         .research-paper .conference {
             background: var(--color-secondary);
-            color: var(--color-dark);
+            color: var(--color-accent);
             display: inline-block;
             padding: 0.3rem 1rem;
             border-radius: 5px;
@@ -286,13 +295,13 @@
         }
 
         .project-header {
-            background: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-gradient-mid) 0%, var(--color-secondary) 100%);
             color: var(--color-accent);
             padding: 1.5rem;
         }
 
         .project-header h3 {
-            color: var(--color-secondary);
+            color: var(--color-accent);
             margin-bottom: 0.5rem;
         }
 
@@ -359,7 +368,7 @@
         }
 
         .timeline-content {
-            background: var(--color-primary);
+            background: linear-gradient(135deg, var(--color-gradient-mid) 0%, var(--color-primary) 100%);
             color: var(--color-accent);
             padding: 2rem;
             border-radius: 10px;
@@ -372,7 +381,7 @@
         }
 
         .timeline-content h3 {
-            color: var(--color-secondary);
+            color: var(--color-accent);
             margin-bottom: 0.5rem;
         }
 
@@ -382,7 +391,7 @@
         }
 
         .timeline-content .date {
-            color: var(--color-light-blue);
+            color: rgba(255,255,255,0.8);
             font-size: 0.9rem;
             margin-bottom: 1rem;
         }
@@ -421,7 +430,7 @@
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg-dark) 100%);
+            background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-mid) 50%, var(--color-gradient-end) 100%);
             color: var(--color-accent);
             text-align: center;
         }
@@ -448,25 +457,27 @@
         }
 
         .contact-item a {
-            color: var(--color-secondary);
+            color: var(--color-dark);
             text-decoration: none;
             font-weight: bold;
         }
 
         .contact-item a:hover {
-            color: var(--color-light-blue);
+            color: var(--color-accent);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .websites {
             margin-top: 2rem;
             padding: 1rem;
-            background: var(--color-secondary);
+            background: var(--color-accent);
             border-radius: 10px;
             display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         .websites a {
-            color: var(--color-dark);
+            color: var(--color-primary);
             text-decoration: none;
             font-weight: bold;
             margin: 0 1rem;
@@ -950,7 +961,7 @@
                 <div class="contact-item">
                     <div class="icon">📧</div>
                     <p>Email</p>
-                    <a href="mailto:tlalii663@gmail.com">tlalii663@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#0f7b636e63666639393c4f68626e6663216c6062"><span class="__cf_email__" data-cfemail="e7938b868b8e8ed1d1d4a7808a868e8bc984888a">[email&#160;protected]</span></a>
                 </div>
                 <div class="contact-item">
                     <div class="icon">📱</div>
@@ -980,8 +991,4 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Itumeleng Tlali. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; color: var(--color-secondary);">🇱🇸 Proudly South African & Lesotho-based</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <p style="margin-top: 0
