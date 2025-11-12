@@ -26,31 +26,9 @@ Visit: `https://itut.github.io`
 7. **Certifications** - Professional credentials and achievements
 8. **Contact** - Get in touch information
 
-## 🚀 Quick Deploy to GitHub Pages
-
-1. **Create a new repository on GitHub:**
-   - Go to https://github.com/new
-   - Name it: `portfolio` or `[your-username].github.io`
-   - Make it public
-   - Don't initialize with README
-
-2. **Upload your files:**
-   - Rename `Itumeleng_Tlali_Portfolio.html` to `index.html`
-   - Upload `index.html` to the repository
-
-3. **Enable GitHub Pages:**
-   - Go to repository Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: main / root
-   - Click Save
-
-4. **Your site will be live at:**
-   - `https://[your-username].github.io/portfolio`
-   - Or `https://[your-username].github.io` if repo name matches username
-
 ## 🎨 Color Palette
 
-The design uses a beautiful soft Lesotho gradient:
+The design uses a beautiful soft BGW gradient:
 
 - **Light Sky Blue** (#87CEEB) - Start of gradient
 - **Medium Blue** (#4A90E2) - Middle transition
@@ -69,7 +47,6 @@ The portfolio is fully responsive and optimized for:
 
 - **GitHub:** https://github.com/ItuT
 - **LinkedIn:** https://linkedin.com/in/itumeleng-tlali
-- **Email:** tlalii663@gmail.com
 - **Phone:** +27 73 636 9058
 
 ## 🌐 Websites
@@ -84,4 +61,4 @@ The portfolio is fully responsive and optimized for:
 
 ---
 
-Built with ❤️ using HTML5, CSS3, and Lesotho pride 🇱🇸
+Built with ❤️ using HTML5, CSS3
