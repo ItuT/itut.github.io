@@ -1,6 +1,6 @@
 # Itumeleng Tlali - Professional Portfolio
 
-🇱🇸 **Beautiful Lesotho-inspired gradient design** featuring the soft sky-blue to green transition.
+**Beautiful BGW-inspired gradient design** featuring the soft sky-blue to green transition.
 
 ## 🌐 Live Portfolio
 
@@ -8,7 +8,7 @@ Visit: `https://itut.github.io`
 
 ## ✨ Features
 
-- **Soft Lesotho Gradient Design** - Inspired by traditional Lesotho colors
+- **Soft BGW Gradient Design** - Inspired by traditional BGW colors
 - **Fully Responsive** - Works perfectly on all devices
 - **Professional Layout** - Showcasing 13+ years of experience
 - **Research Publications** - CVPR 2026, CV4DC 2025, IEEE
