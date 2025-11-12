@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itumeleng Tlali - Senior Full-Stack Engineer & AI Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #002868;
+            --color-secondary: #009543;
+            --color-accent: #FFFFFF;
+            --color-dark: #000000;
+            --color-light-blue: #87CEEB;
+            --color-bg-dark: #001F4D;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--color-primary);
+            color: var(--color-accent);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-secondary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--color-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg-dark) 100%);
+            color: var(--color-accent);
+            padding: 150px 2rem 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero .description {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: var(--color-light-blue);
+        }
+
+        .hero .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero .stat {
+            text-align: center;
+        }
+
+        .hero .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--color-secondary);
+        }
+
+        .hero .stat-label {
+            font-size: 1rem;
+            color: var(--color-light-blue);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+            text-align: center;
+        }
+
+        section .section-subtitle {
+            text-align: center;
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .about-card {
+            background: var(--color-primary);
+            color: var(--color-accent);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--color-secondary);
+            transition: transform 0.3s;
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .about-card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #f9f9f9;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            color: #666;
+        }
+
+        .skill-category li:before {
+            content: "✓ ";
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Research Section */
+        .research {
+            background: white;
+        }
+
+        .research-grid {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-paper {
+            background: var(--color-bg-dark);
+            color: var(--color-accent);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid var(--color-secondary);
+        }
+
+        .research-paper h3 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .research-paper .authors {
+            font-size: 0.9rem;
+            color: var(--color-light-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .research-paper .conference {
+            background: var(--color-secondary);
+            color: var(--color-dark);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #f9f9f9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-header {
+            background: var(--color-primary);
+            color: var(--color-accent);
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .project-body li {
+            padding: 0.3rem 0;
+            color: #666;
+        }
+
+        .project-body li:before {
+            content: "• ";
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--color-secondary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--color-secondary);
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: var(--color-primary);
+            color: var(--color-accent);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 45%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content h3 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .date {
+            color: var(--color-light-blue);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Certifications */
+        .certifications {
+            background: #f9f9f9;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--color-secondary);
+        }
+
+        .cert-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card .issuer {
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-bg-dark) 100%);
+            color: var(--color-accent);
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--color-accent);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-light-blue);
+        }
+
+        .websites {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--color-secondary);
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .websites a {
+            color: var(--color-dark);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-dark);
+            color: var(--color-accent);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .timeline:before {
+                left: 0;
+            }
+
+            .timeline-content {
+                width: 100%;
+                margin-left: 2rem !important;
+            }
+
+            .hero .stats {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Itumeleng Tlali</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>ITUMELENG TLALI</h1>
+            <p class="tagline">Senior Full-Stack Engineer | AI Researcher | Tech Entrepreneur</p>
+            <p class="description">
+                13+ years building scalable cloud systems • Published AI researcher • Multi-business founder
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">13+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Research Papers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">Major Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Who I Am</h2>
+            <p class="section-subtitle">Three roles, one mission: Building innovative technology solutions</p>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>🏢 Corporate Leader</h3>
+                    <p><strong>Senior AWS Cloud Practitioner & Team Lead</strong></p>
+                    <p>BMW IT Hub South Africa</p>
+                    <p style="margin-top: 1rem;">Leading cloud-native automotive systems optimization for global production environments. Architecting enterprise database solutions and AWS infrastructure migrations.</p>
+                </div>
+                <div class="about-card">
+                    <h3>🔬 AI Researcher</h3>
+                    <p><strong>Co-Founder & CTO</strong></p>
+                    <p>MindForge AI</p>
+                    <p style="margin-top: 1rem;">Published researcher in autonomous driving and computer vision. Papers presented at CVPR 2026 and CV4DC 2025. Developing cutting-edge GenAI solutions for enterprises.</p>
+                </div>
+                <div class="about-card">
+                    <h3>🚀 Entrepreneur</h3>
+                    <p><strong>Founder & Director</strong></p>
+                    <p>Motebo Technologies | Family Health Clinic</p>
+                    <p style="margin-top: 1rem;">Building AI agent platforms, mobile games, and transforming healthcare in Lesotho with plans for a 300-bed hospital and medical education facility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Technical Expertise</h2>
+            <p class="section-subtitle">Full-stack capabilities across cloud, AI, and enterprise development</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <ul>
+                        <li>AWS (ECS, Lambda, S3, DynamoDB)</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>Terraform & CloudFormation</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Jenkins & GitHub Actions</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🤖 AI & Machine Learning</h3>
+                    <ul>
+                        <li>LLMs & Transformers</li>
+                        <li>RAG (Chroma, FAISS)</li>
+                        <li>Fine-tuning (LoRA/QLoRA)</li>
+                        <li>Multi-agent Systems</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Backend Development</h3>
+                    <ul>
+                        <li>Java/Spring Boot</li>
+                        <li>Python</li>
+                        <li>Node.js</li>
+                        <li>Microservices Architecture</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🎨 Frontend Development</h3>
+                    <ul>
+                        <li>Angular</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>HTML/CSS</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Databases</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>DynamoDB</li>
+                        <li>Oracle DB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>📱 Mobile & IoT</h3>
+                    <ul>
+                        <li>Android Development</li>
+                        <li>Flutter</li>
+                        <li>Firebase</li>
+                        <li>AWS IoT</li>
+                        <li>MQTT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <h2>Research & Publications</h2>
+            <p class="section-subtitle">Contributing to autonomous driving and computer vision research</p>
+            <div class="research-grid">
+                <div class="research-paper">
+                    <h3>AfricanDrive: A Vision-Based Dataset for Advancing Autonomous Driving and Road Safety in South Africa</h3>
+                    <p class="authors">Moseli Mots'oehli, Xiangbo Gao, Yang Qian, Thulani Babeli, Itumeleng Victor Tlali, et al.</p>
+                    <span class="conference">CVPR 2026 Conference Submission</span>
+                    <p style="margin-top: 1rem;">First comprehensive vision-based dataset for autonomous driving in South African road conditions, addressing unique challenges of African infrastructure and traffic patterns.</p>
+                </div>
+                <div class="research-paper">
+                    <h3>Simulating Refractive Distortions and Weather-Induced Artifacts for Resource-Constrained Autonomous Perception</h3>
+                    <p class="authors">Moseli Mots'oehli, Feimei Chen, Hok Wai Chan, Itumeleng Victor Tlali, Thulani Babeli, et al.</p>
+                    <span class="conference">CV4DC 2025 Workshop - Published July 2025</span>
+                    <p style="margin-top: 1rem;">Research on simulating challenging weather conditions for autonomous perception systems in resource-constrained environments.</p>
+                </div>
+                <div class="research-paper">
+                    <h3>Smartphone-based Mobile Incident Response System for Indoor and Outdoor Scenarios</h3>
+                    <p class="authors">Itumeleng Victor Tlali, et al.</p>
+                    <span class="conference">IEEE Publication</span>
+                    <p style="margin-top: 1rem;">System design for mobile-first emergency management using GPS and image capture for efficient incident response.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 1.1rem;">
+                🔗 <a href="https://openreview.net/profile?id=~Itumeleng_Victor_Tlali1" target="_blank" style="color: var(--color-secondary); font-weight: bold;">View OpenReview Profile</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">Production-ready systems across AI, mobile, and enterprise domains</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🤖 Recipe Recommendation Chatbot</h3>
+                        <p>Production RAG System | Andela GenAI PLG 4</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Advanced RAG chatbot with intelligent caching achieving 70-90% cost reduction</p>
+                        <ul>
+                            <li>Multi-provider LLM support (OpenAI, Gemini, Claude)</li>
+                            <li>87.5% cache hit rate</li>
+                            <li>Memory-optimized streaming</li>
+                            <li>Next.js 15 frontend with real-time AI</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">ChromaDB</span>
+                            <span class="tag">Next.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🎮 Morabaraba Mobile Game</h3>
+                        <p>Traditional African Board Game</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Published Android application for Nine Men's Morris (Lesotho variation)</p>
+                        <ul>
+                            <li>Real-time multiplayer with Firebase</li>
+                            <li>AI opponent with difficulty levels</li>
+                            <li>Published on Google Play</li>
+                            <li>Cultural preservation through gaming</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">DynamoDB</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🚗 BMW Enterprise Infrastructure</h3>
+                        <p>Cloud Optimization at Scale</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Enterprise cloud infrastructure optimization for global automotive operations</p>
+                        <ul>
+                            <li>High-volume database performance tuning</li>
+                            <li>AWS migration strategies</li>
+                            <li>Zero-downtime deployments</li>
+                            <li>Global production plant support</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">AWS</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🤖 Moteya AI Platform</h3>
+                        <p>Autonomous Business Automation</p>
+                    </div>
+                    <div class="project-body">
+                        <p>AI agent platform for African entrepreneurs automating business operations</p>
+                        <ul>
+                            <li>Multi-agent architecture</li>
+                            <li>Tender application automation</li>
+                            <li>Business plan generation</li>
+                            <li>Financial forecasting</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">RAG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🚦 Spothole Navigation System</h3>
+                        <p>IoT-Based Road Safety</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Crowdsourced pothole detection and real-time navigation warning system</p>
+                        <ul>
+                            <li>Mobile app with GPS tracking</li>
+                            <li>Image capture and geospatial data</li>
+                            <li>Real-time driver warnings</li>
+                            <li>Published on Google Play</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">Android</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">DynamoDB</span>
+                            <span class="tag">Maps API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>🎮 5DT Virtual Reality Simulations</h3>
+                        <p>Mining & Military Training</p>
+                    </div>
+                    <div class="project-body">
+                        <p>3D game engines for realistic vehicle simulation training systems</p>
+                        <ul>
+                            <li>Mining equipment simulations</li>
+                            <li>Military vehicle training</li>
+                            <li>Hardware integration</li>
+                            <li>Realistic physics engines</li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Lua</span>
+                            <span class="tag">3D Studio Max</span>
+                            <span class="tag">VR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">13+ years across Fortune 500 companies and entrepreneurial ventures</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior AWS Cloud Practitioner & Team Lead</h3>
+                        <p class="company">BMW IT Hub South Africa</p>
+                        <p class="date">September 2022 - Present</p>
+                        <p>Leading cloud-native automotive systems optimization, database performance tuning, and AWS infrastructure migrations for global operations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Co-Founder & CTO</h3>
+                        <p class="company">MindForge AI</p>
+                        <p class="date">2023 - Present</p>
+                        <p>AI research in autonomous driving, published papers at CVPR and CV4DC, enterprise GenAI solutions development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Founder & Director</h3>
+                        <p class="company">Motebo Technologies</p>
+                        <p class="date">December 2021 - Present</p>
+                        <p>Building AI agent platforms, mobile games, and software consulting services for African markets.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Cloud Developer</h3>
+                        <p class="company">GoPuff</p>
+                        <p class="date">February 2023 - June 2023</p>
+                        <p>DevOps team creating environments and CI/CD pipelines using Kubernetes and GitHub Actions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Developer</h3>
+                        <p class="company">HP, Inc.</p>
+                        <p class="date">April 2022 - January 2023</p>
+                        <p>Developed mission-critical software components for distributed file systems using C, C++, and Python.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior Software Engineer</h3>
+                        <p class="company">BMW Group</p>
+                        <p class="date">February 2019 - January 2021</p>
+                        <p>Full-stack development of enterprise applications for global production plants, AWS cloud architecture.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior AWS Solutions Architect</h3>
+                        <p class="company">Vodacom (via Altron)</p>
+                        <p class="date">December 2020 - November 2021</p>
+                        <p>Cloud migration, infrastructure as code, disaster recovery planning, and team upskilling.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Certifications & Achievements</h2>
+            <p class="section-subtitle">Professional credentials and notable accomplishments</p>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h3>🏆 96% Java SE 8</h3>
+                    <p class="issuer">IKM Assessment</p>
+                    <p>Exceptional Java proficiency</p>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS DevOps Engineer</h3>
+                    <p class="issuer">Amazon Web Services</p>
+                    <p>Professional Level - March 2021</p>
+                </div>
+                <div class="cert-card">
+                    <h3>AWS Solutions Architect</h3>
+                    <p class="issuer">Amazon Web Services</p>
+                    <p>Associate Level - November 2020</p>
+                </div>
+                <div class="cert-card">
+                    <h3>GenAI Engineering</h3>
+                    <p class="issuer">Andela Talent Network</p>
+                    <p>2025</p>
+                </div>
+                <div class="cert-card">
+                    <h3>GitHub Copilot</h3>
+                    <p class="issuer">GitHub</p>
+                    <p>June 2025 - June 2028</p>
+                </div>
+                <div class="cert-card">
+                    <h3>TensorFlow Developer</h3>
+                    <p class="issuer">DeepLearning.AI</p>
+                    <p>November 2017</p>
+                </div>
+                <div class="cert-card">
+                    <h3>ECSA Registration</h3>
+                    <p class="issuer">Engineering Council SA</p>
+                    <p>Reg #: 201450599</p>
+                </div>
+                <div class="cert-card">
+                    <h3>CCNA & CCNP</h3>
+                    <p class="issuer">Cisco</p>
+                    <p>2011</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Build Something Great</h2>
+            <p class="section-subtitle" style="color: var(--color-light-blue);">Available for consulting, collaboration, and leadership opportunities</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="icon">📧</div>
+                    <p>Email</p>
+                    <a href="mailto:tlalii663@gmail.com">tlalii663@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">📱</div>
+                    <p>Phone</p>
+                    <a href="tel:+27736369058">+27 73 636 9058</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">🔗</div>
+                    <p>LinkedIn</p>
+                    <a href="https://linkedin.com/in/itumeleng-tlali" target="_blank">itumeleng-tlali</a>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">💻</div>
+                    <p>GitHub</p>
+                    <a href="https://github.com/ItuT" target="_blank">ItuT</a>
+                </div>
+            </div>
+            <div class="websites">
+                <a href="https://mindforgeai.co.za" target="_blank">mindforgeai.co.za</a> •
+                <a href="https://morabaraba.co.za" target="_blank">morabaraba.co.za</a> •
+                <a href="https://motebo.co.za" target="_blank">motebo.co.za</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Itumeleng Tlali. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; color: var(--color-secondary);">🇱🇸 Proudly South African & Lesotho-based</p>
+        </div>
+    </footer>
+</body>
+</html>
