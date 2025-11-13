@@ -1,6 +1,3 @@
-Here’s the updated version with **CVPR** removed from the text:
-
-```md
 # Itumeleng Tlali - Professional Portfolio
 
 **Beautiful BGW-inspired gradient design** featuring the soft sky-blue to green transition.
@@ -14,7 +11,7 @@ Visit: `https://itut.github.io`
 - **Soft BGW Gradient Design** - Inspired by traditional BGW colors
 - **Fully Responsive** - Works perfectly on all devices
 - **Professional Layout** - Showcasing 13+ years of experience
-- **Research Publications** - 2026 computer vision conference submission, CV4DC 2025, IEEE
+- **Research Publications** - CV4DC 2025, IEEE
 - **Featured Projects** - 8+ major projects with detailed descriptions
 - **Interactive Navigation** - Smooth scrolling between sections
 
@@ -65,4 +62,3 @@ The portfolio is fully responsive and optimized for:
 ---
 
 Built with ❤️ using HTML5, CSS3
-```
