@@ -1,6 +1,3 @@
-Here’s the updated version with **CVPR** removed from the text:
-
-```md
 # Itumeleng Tlali - Professional Portfolio
 
 **Beautiful BGW-inspired gradient design** featuring the soft sky-blue to green transition.
@@ -65,4 +62,3 @@ The portfolio is fully responsive and optimized for:
 ---
 
 Built with ❤️ using HTML5, CSS3
-```
